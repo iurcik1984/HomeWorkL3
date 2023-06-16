@@ -7,8 +7,6 @@ public class Main {
     static String[] str = {"I", "Love", "Java"};
 
     public static void main(String[] args) {
-
-
         bilet(array1);
         bilet(array2);
         inversareString(str);
@@ -17,7 +15,7 @@ public class Main {
         printNumPare(array);
     }
 
-    static void bilet(int array[]) {
+    static void bilet(int[] array) {
         int s1 = 0;
         int s2 = 0;
         for (int i = 0; i < array.length; i++) {
@@ -36,46 +34,40 @@ public class Main {
         }
     }
 
-    static void inversareString(String str[]) {
+    static void inversareString(String[] str) {
 
         System.out.println("Afisare in ordine inversa");
-        for (int i = str.length - 1; i >= 0; i--) {
-
-            System.out.print(str[i] + " ");
-
-        }
+        for (int i = str.length - 1; i >= 0; i--) System.out.print(str[i] + " ");
         System.out.println();
     }
 
     static double mediaAritmetica() {
         int sum = 0;
-        double ma = 0;
 
-        for (int i = 0; i < array.length; i++) {
-            sum = sum + array[i];
+        for (int j : array) {
+            sum = sum + j;
         }
 
 
-        return ma = sum / array.length;
+        return (double) sum / array.length;
     }
 
     static void printNumPare(int[] array) {
 
-        for (int i = 0; i < array.length; i++) {
-            if (array[i]% 2 == 0){
-                System.out.print(array[i]+" ");
+        for (int j : array) {
+            if (j % 2 == 0) {
+                System.out.print(j + " ");
             }
         }
         System.out.println();
     }
+
     static void printNumImpare(int[] array) {
 
-        for (int i = 0; i < array.length; i++) {
-            if (array[i]% 2!=0){
-                System.out.print(array[i]+" ");
-            }
+        for (int j : array) {
+            if (j % 2 != 0) System.out.print(j + " ");
+            System.out.println();
         }
-        System.out.println();
     }
 }
 
